@@ -18,16 +18,9 @@ int main()
             else printf("#");
         }
         
-        if(i<=n-1)
-        {
-            s--;
-            k=k+2;
-        }
-        else
-        {
-            s++;
-            k=k-2;
-        }
+        if(i<=n-1) s--, k=k+2;
+        else s++, k=k-2;
+        
         printf("\n");
     }
     return 0;
