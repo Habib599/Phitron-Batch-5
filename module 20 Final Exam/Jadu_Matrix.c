@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int main() 
-{
+int main() {
     int N, M;
     scanf("%d %d", &N, &M);
     int a[N][M];
 
+    
     for (int i = 0; i < N; i++) 
     {
         for (int j = 0; j < M; j++) 
@@ -14,27 +14,27 @@ int main()
         }
     }
 
-    
-    int flag=1;
-    if(N != M) 
+    int flag = 1; 
+    if (N != M) 
     {
-        flag=0;
+        flag = 0;
     }
-    for(int i=0;i<N;i++)
+    for (int i = 0; i < N; i++) 
     {
-        for(int j=0;j<M;j++)
+        for (int j = 0; j < M; j++) 
         {
-            if(i==j)
+            if (i == j) 
             {
-                if(a[i][j] != a[0][0])
-                {
-                    flag=0;
-                }
-            }
-            else if(a[i][j]!=0)
+                if (a[i][j] != 1) flag = 0;
+            } 
+            
+            else if (i + j == N - 1) 
             {
-                flag=0;
-            }
+                if (a[i][j] != 1) flag = 0;
+            } 
+            
+            else if (a[i][j] != 0) flag = 0;
+
         }
     }
 
